@@ -43,3 +43,15 @@ class TodoItem(models.Model):
 
     def get_absolute_url(self):
         return reverse("tasks:details", args=[self.pk])
+
+class Category(models.Model):
+    slug = models.CharField(max_length=128)
+    name = models.CharField(max_length=256)
+    todos_count = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
+
+    def __str__(self):
+        return f'{self.name} ({self.slug})'
