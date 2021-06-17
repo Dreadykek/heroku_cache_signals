@@ -27,6 +27,7 @@ class TodoItem(models.Model):
         (PRIORITY_LOW, "Низкий приоритет"),
     ]
 
+
     description = models.TextField("описание")
     is_completed = models.BooleanField("выполнено", default=False)
     created = models.DateTimeField(auto_now_add=True)
