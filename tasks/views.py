@@ -19,9 +19,9 @@ def index(request):
     todoi = TodoItem.objects.all()
 
     priority_counts = {
-        'HIGH' : todoi.filter(priority = 0).count(),
-        'MEDIUM' : todoi.filter(priority = 1).count(),
-        'LOW' : todoi.filter(priority = 2).count()
+        'HIGH' : todoi.filter(priority = 1).count(),
+        'MEDIUM' : todoi.filter(priority = 2).count(),
+        'LOW' : todoi.filter(priority = 3).count()
     }
 
     counts = Category.objects.annotate(total_tasks=Count(
