@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from tasks.models import TodoItem, Category
+import datetime
 
 
 def index(request):
@@ -30,6 +31,9 @@ def index(request):
 
     return render(request, "tasks/index.html", {"counts": counts, "priority": priority_counts})
 
+def time_cache(request):
+    now = datetime.datetime.now()
+    return render(request, "tasks/cache.html", {'time': now.strftime("%d-%m-%Y %H:%M")})
 
 def filter_tasks(tags_by_task):
     return set(sum(tags_by_task, []))
