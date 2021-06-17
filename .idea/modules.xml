@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/HerokuTest.iml" filepath="$PROJECT_DIR$/.idea/HerokuTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pws-django-todoapp-heroku.iml" filepath="$PROJECT_DIR$/.idea/pws-django-todoapp-heroku.iml" />
     </modules>
   </component>
 </project>
